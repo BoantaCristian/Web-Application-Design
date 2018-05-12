@@ -1,0 +1,45 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+<!-- To do rezolva path wroot css pentru script tag >-->
+<style>
+    .body {
+        background-image: url("/images/hangar.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+        border-top: solid;
+        border-color: grey;
+    }
+
+    .gradient {
+        background: linear-gradient(to left, white, #BFBFBF);
+    }
+
+    .h {
+        text-shadow: 1px 1px 10px black;
+        color: white;
+    }
+</style> <!--To do rezolva path wroot css pentru script tag >-->
+
+<script src="~/css/site.css/site.min.css/"></script>
+
+<h1 class="h">About</h1>
+
+<body class="body">
+</body>
+<div class="column gradient">
+    <h3>@Model.Message</h3>
+    <p>This is a web application that manages an online store of auto products. It is destinated to the open public who want to see/buy car parts</p>
+    <p>This project was made by Boanta Cristian and Calafeteanu Bogdan students of Automatic and Computers Faculty</p>
+</div>

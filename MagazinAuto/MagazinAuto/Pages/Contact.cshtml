@@ -1,0 +1,169 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<!-- To do rezolva path wroot css pentru script tag >-->
+<style>
+    .body {
+        background-image: url("/images/hangar.jpg");
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .form-style-1 {
+        max-width: 400px;
+        padding: 20px 12px 10px 20px;
+        font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+
+        .form-style-1 li {
+            padding: 0;
+            display: block;
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+
+        .form-style-1 label {
+            margin: 0 0 3px 0;
+            padding: 0px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-style-1 input[type=text],
+        .form-style-1 input[type=date],
+        .form-style-1 input[type=datetime],
+        .form-style-1 input[type=number],
+        .form-style-1 input[type=search],
+        .form-style-1 input[type=time],
+        .form-style-1 input[type=url],
+        .form-style-1 input[type=email],
+        textarea,
+        select {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #BEBEBE;
+            padding: 7px;
+            margin: 0px;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;
+        }
+
+            .form-style-1 input[type=text]:focus,
+            .form-style-1 input[type=date]:focus,
+            .form-style-1 input[type=datetime]:focus,
+            .form-style-1 input[type=number]:focus,
+            .form-style-1 input[type=search]:focus,
+            .form-style-1 input[type=time]:focus,
+            .form-style-1 input[type=url]:focus,
+            .form-style-1 input[type=email]:focus,
+            .form-style-1 textarea:focus,
+            .form-style-1 select:focus {
+                box-shadow: 0 0 8px red;
+                border: 1px solid #FB2F2F;
+            }
+
+        .form-style-1 .field {
+            width: 100%;
+        }
+
+        .form-style-1 .field-textarea {
+            height: 100px;
+        }
+
+    .buttoneliminare {
+        background-color: #AA2626; /* red */
+        border: none;
+        color: white;
+        padding: 7px 17px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .buttoneliminare1:hover {
+        background-color: #555555;
+        color: white;
+        padding: 8px 18px;
+    }
+
+    .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        height: 100%;
+        border-top: solid;
+        border-color: grey;
+    }
+
+    .gradient {
+        background: linear-gradient(to top left, white, #BFBFBF);
+    }
+
+    .h {
+        text-shadow: 1px 1px 10px black;
+        color: white;
+    }
+</style><!--To do rezolva path wroot css pentru script tag >-->
+
+<script src="~/css/site.css/"></script>
+
+<h1 class="h">Contact</h1>
+<body class="body">
+</body>
+<div class="column gradient">
+
+    <h3>@Model.Message</h3>
+    <address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
+
+    <address>
+        <strong>Support:</strong> <a href="mailto:cristi_cristi222@yahoo.com">cristi_cristi222@yahoo.com</a><br />
+        <strong>Marketing:</strong> Facebook: <a href="mailto:Marketing@example.com">Boanta Cristian</a>
+    </address>
+
+    <form>
+        <ul class="form-style-1">
+
+            <b>Make a ticket</b>
+            <li>
+                <textarea name="field5" id="field5" class="field field-textarea" placeholder="Type your issue here"></textarea>
+            </li>
+            <li>
+                <button input type="submit" class="buttoneliminare buttoneliminare1"> Send </button>
+            </li>
+        </ul>
+    </form><br />
+    <h5><b>Send an email</b></h5>
+    <form>
+        <ul class="form-style-1">
+            <li>
+                <label>Email </label>
+                <input type="email" name="field3" class="field" placeholder="mail@example.com" />
+            </li>
+            <li>
+                <label>Message</label>
+                <textarea name="field5" id="field5" class="field field-textarea" placeholder="Type message here"></textarea>
+            </li>
+            <li>
+                <button input type="submit" class="buttoneliminare buttoneliminare1"> Send </button>
+            </li>
+        </ul>
+    </form>
+</div>

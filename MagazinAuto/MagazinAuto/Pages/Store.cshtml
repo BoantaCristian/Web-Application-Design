@@ -1,0 +1,249 @@
+﻿@page
+@model MagazinAuto.Pages.StoreModel
+@{
+    ViewData["Title"] = "Store";
+}
+
+<!--To do rezolva path wroot css pentru script tag >-->
+
+<style>
+    .button {
+        background-color: #9A1010; /* red */
+        border: none;
+        color: white;
+        padding: 16px 87px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .buttoneliminare {
+        background-color: #AA2626; /* red */
+        border: none;
+        color: white;
+        padding: 7px 17px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1:hover {
+        background-color: #555555;
+        color: white;
+        padding: 16px 88px; /* modifica marime buton la hover */
+        font-size: 17px; /* mareste textu*/
+    }
+
+    .buttoneliminare1:hover {
+        background-color: #555555;
+        color: white;
+        padding: 8px 18px;
+    }
+
+    .form-style-1 {
+        max-width: 400px;
+        padding: 20px 12px 10px 20px;
+        font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+
+        .form-style-1 li {
+            padding: 0;
+            display: block;
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+
+        .form-style-1 label {
+            margin: 0 0 3px 0;
+            padding: 0px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-style-1 input[type=text],
+        .form-style-1 input[type=date],
+        .form-style-1 input[type=datetime],
+        .form-style-1 input[type=number],
+        .form-style-1 input[type=search],
+        .form-style-1 input[type=time],
+        .form-style-1 input[type=url],
+        .form-style-1 input[type=email],
+        textarea,
+        select {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #BEBEBE;
+            padding: 7px;
+            margin: 0px;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;
+        }
+
+            .form-style-1 input[type=text]:focus,
+            .form-style-1 input[type=date]:focus,
+            .form-style-1 input[type=datetime]:focus,
+            .form-style-1 input[type=number]:focus,
+            .form-style-1 input[type=search]:focus,
+            .form-style-1 input[type=time]:focus,
+            .form-style-1 input[type=url]:focus,
+            .form-style-1 input[type=email]:focus,
+            .form-style-1 textarea:focus,
+            .form-style-1 select:focus {
+                box-shadow: 0 0 8px red;
+                border: 1px solid #FB2F2F;
+            }
+
+        .form-style-1 .field {
+            width: 100%;
+        }
+
+        .form-style-1 .field-textarea {
+            height: 100px;
+        }
+
+    .column1 {
+        float: left;
+        width: 70%;
+        padding: 10px;
+        height: 100%;
+        border-top: solid;
+        border-color: #4D4D4D;
+    }
+
+    .column2 {
+        float: left;
+        width: 30%;
+        padding: 10px;
+        height: 300px;
+        border-top: solid;
+        border-color: #4D4D4D;
+    }
+
+    .inner {
+        display: table;
+        position: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: table-row;
+    }
+
+    .cell {
+        display: table-cell;
+    }
+
+    .gradient1 { /* transform cu transparenta mica */
+        background: linear-gradient(to left, white, #BFBFBF);
+    }
+
+    .gradient2 {
+        background: linear-gradient(to right, white, #BFBFBF);
+        height: 10%;
+    }
+
+    .body {
+        background-image: url("/images/Hangar_home.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .h {
+        text-shadow: 1px 1px 10px black;
+        color: white;
+    }
+
+</style> <!-- To do rezolva path wroot css pentru script tag >-->
+
+<script src="~/css/"></script>
+<script>
+    products = [
+        {
+            name: 'The Book of Trees',
+            price: 19
+        },
+        {
+            name: 'Thzsdfbrees',
+            price: 39
+        }]
+</script>
+<script src="~/js/site.js"></script>
+<script src="Controllers/controller.js"></script>
+<body class="body">
+</body>
+<h1 class="h">Store</h1>
+<div>
+    <div class="inner">
+        <div class="row">
+            <div class="cell"><button class="button button1"> Piese motor</button></div>
+            <div class="cell"><button class="button button1"> Piese exterior</button></div>
+            <div class="cell"><button class="button button1"> Piese interior</button></div>
+            <div class="cell"><button class="button button1"> Produse decorative</button></div>
+        </div>
+    </div>
+
+    <div class="column1 gradient1 text">
+        <h2>List of items you want to buy</h2>
+        <div ng-controller="controller">
+            <div class="row text">
+                <div class="cell">
+                    <div ng-repeat="product in products">
+                        <img ng-src="{{ product.cover }}">
+                        <p>{{ product.name }}</p>
+                        <p>{{ product.price | currency }}</p>
+                        <p>{{ product.pubdate | date }}</p>
+                        <p ng-click="plusOne($index)">+ {{ product.likes }} </p>
+                        <p ng-click="minusOne($index)">-{{product.dislikes}} </p>
+                        <button class="buttoneliminare buttoneliminare1"> Add </button>
+                    </div>
+                </div>
+                <div class="cell">
+
+                </div>
+            </div>
+        </div>
+        <div class="row text">
+            <div class="cell">
+                Item 2 luat din data base
+            </div>
+            <div class="cell">
+                <button class="buttoneliminare buttoneliminare1"> Add </button>
+            </div>
+        </div>
+        <select class="button">
+            <option value="Name">Order by: Name</option>
+            <option value="Price">Order by: Price</option>
+            <option value="Date">Order by: Date</option>
+            <option value="Stock">Order by: Stock</option>
+        </select>
+    </div>
+                    <div class="column2 gradient2 text">
+                        <h2>News</h2>
+                        <form>
+                            <ul class="form-style-1">
+                                <li>
+                                    <textarea name="field5" id="field5" class="field field-textarea" placeholder="Type your adress here"></textarea>
+                                </li>
+                                <li>
+                                    <button input type="submit" class="buttoneliminare buttoneliminare1"> Post </button>
+                                </li>
+                            </ul>
+                        </form><br />
+                    </div>
+                </div>
