@@ -14,6 +14,7 @@ namespace MagazinAuto.Data
         {
         }
 
+        //public DbSet<Piesa> Piesa { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

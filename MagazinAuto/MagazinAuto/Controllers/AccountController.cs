@@ -29,5 +29,18 @@ namespace MagazinAuto.Controllers
             _logger.LogInformation("User logged out.");
             return RedirectToPage("/Index");
         }
+
+        /*Piesa db = new Piesa();
+
+        public ActionResult Index()
+        {
+            var piesa = from m in db.Piesa
+                         where m.ReleaseDate > new DateTime(1984, 6, 1)
+                         select m;
+
+            return View(piesa.ToList());
+
+        }*/
+
     }
 }

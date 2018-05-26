@@ -3,10 +3,10 @@ C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\bin\Debug\netcoreapp2.0\MagazinAuto.runtimeconfig.dev.json
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\bin\Debug\netcoreapp2.0\MagazinAuto.dll
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\bin\Debug\netcoreapp2.0\MagazinAuto.pdb
-C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.csprojResolveAssemblyReference.cache
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.csproj.CoreCompileInputs.cache
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.AssemblyInfoInputs.cache
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.AssemblyInfo.cs
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.dll
 C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.pdb
+C:\Users\Boanta\Desktop\facultate\Web aplication design\MagazinAuto\MagazinAuto\obj\Debug\netcoreapp2.0\MagazinAuto.csprojAssemblyReference.cache

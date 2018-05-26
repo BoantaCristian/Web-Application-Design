@@ -117,7 +117,7 @@
 
     .column1 {
         float: left;
-        width: 70%;
+        width: 100%;
         padding: 10px;
         height: 100%;
         border-top: solid;
@@ -168,82 +168,64 @@
         text-shadow: 1px 1px 10px black;
         color: white;
     }
-
 </style> <!-- To do rezolva path wroot css pentru script tag >-->
 
 <script src="~/css/"></script>
-<script>
-    products = [
-        {
-            name: 'The Book of Trees',
-            price: 19
-        },
-        {
-            name: 'Thzsdfbrees',
-            price: 39
-        }]
-</script>
+
 <script src="~/js/site.js"></script>
 <script src="Controllers/controller.js"></script>
 <body class="body">
-</body>
-<h1 class="h">Store</h1>
-<div>
-    <div class="inner">
-        <div class="row">
-            <div class="cell"><button class="button button1"> Piese motor</button></div>
-            <div class="cell"><button class="button button1"> Piese exterior</button></div>
-            <div class="cell"><button class="button button1"> Piese interior</button></div>
-            <div class="cell"><button class="button button1"> Produse decorative</button></div>
-        </div>
-    </div>
 
-    <div class="column1 gradient1 text">
-        <h2>List of items you want to buy</h2>
-        <div ng-controller="controller">
+    <h1 class="h">Store</h1>
+    <div>
+        <div class="inner">
+            <div class="row">
+                <div class="cell"><button class="button button1"> Piese motor</button></div>
+                <div class="cell"><button class="button button1"> Piese exterior</button></div>
+                <div class="cell"><button class="button button1"> Piese interior</button></div>
+                <div class="cell"><button class="button button1"> Produse decorative</button></div>
+            </div>
+        </div>
+        <!-- at{
+        var db = MagazinAuto.Data.ApplicationDbContext.;
+        List<MagazinAuto.> products = db.Piesa.ToList();
+        } -->
+        <div class="column1 gradient1 text">
+            <h2>List of items you want to buy</h2>
+            <div class="row text">
+                <!--at{
+        foreach (var prod in products)
+        {
+            <div class="cell">
+                <label>Nume produs: </label>a prod.Nume
+                <label>Pret produs: </label>a prod.Pret
+                <button class="buttoneliminare buttoneliminare1"> Add </button>
+                bag <- true
+            </div>
+        }
+    }-->
+                <div class="cell">
+                    Item 1 luat din data base
+                </div>
+                <div class="cell">
+                    <button class="buttoneliminare buttoneliminare1"> Add </button>
+                </div>
+            </div>
             <div class="row text">
                 <div class="cell">
-                    <div ng-repeat="product in products">
-                        <img ng-src="{{ product.cover }}">
-                        <p>{{ product.name }}</p>
-                        <p>{{ product.price | currency }}</p>
-                        <p>{{ product.pubdate | date }}</p>
-                        <p ng-click="plusOne($index)">+ {{ product.likes }} </p>
-                        <p ng-click="minusOne($index)">-{{product.dislikes}} </p>
-                        <button class="buttoneliminare buttoneliminare1"> Add </button>
-                    </div>
+                    Item 2 luat din data base
                 </div>
                 <div class="cell">
-
+                    <button class="buttoneliminare buttoneliminare1"> Add </button>
                 </div>
             </div>
+            <select class="button">
+                <option value="Name">Order by: Name</option>
+                <option value="Price">Order by: Price</option>
+                <option value="Date">Order by: Date</option>
+                <option value="Stock">Order by: Stock</option>
+            </select>
         </div>
-        <div class="row text">
-            <div class="cell">
-                Item 2 luat din data base
-            </div>
-            <div class="cell">
-                <button class="buttoneliminare buttoneliminare1"> Add </button>
-            </div>
-        </div>
-        <select class="button">
-            <option value="Name">Order by: Name</option>
-            <option value="Price">Order by: Price</option>
-            <option value="Date">Order by: Date</option>
-            <option value="Stock">Order by: Stock</option>
-        </select>
+        
     </div>
-                    <div class="column2 gradient2 text">
-                        <h2>News</h2>
-                        <form>
-                            <ul class="form-style-1">
-                                <li>
-                                    <textarea name="field5" id="field5" class="field field-textarea" placeholder="Type your adress here"></textarea>
-                                </li>
-                                <li>
-                                    <button input type="submit" class="buttoneliminare buttoneliminare1"> Post </button>
-                                </li>
-                            </ul>
-                        </form><br />
-                    </div>
-                </div>
+</body>

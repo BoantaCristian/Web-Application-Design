@@ -1,8 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-MagazinAuto-85740830-EA65-4752-842C-83693F798282</UserSecretsId>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="wwwroot\MagazinAuto\**" />
+    <Content Remove="wwwroot\MagazinAuto\**" />
+    <EmbeddedResource Remove="wwwroot\MagazinAuto\**" />
+    <None Remove="wwwroot\MagazinAuto\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" PrivateAssets="All" />

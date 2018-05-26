@@ -181,6 +181,19 @@
 </div>
 
 <div class="column gradient1">
+
+    <!-- at{
+        foreach (var nou in news)
+        {
+            <div class="col-md-3">
+                <h2>at nou.Title</h2>
+                <p>
+                    at nou.Message
+                </p>
+            </div>
+        }
+    }-->
+
     <div class="col-md-3">
         <h2>Sale</h2>
         <ul>
@@ -211,10 +224,13 @@
         <form>
             <ul class="form-style-1">
                 <li>
-                    <textarea name="field5" id="field5" class="field field-textarea" placeholder="Type your adress here"></textarea>
+                    <input type="text" name="field3" id="title" class="field" placeholder="Title here" />
                 </li>
                 <li>
-                    <button input type="submit" class="buttoneliminare buttoneliminare1"> Post </button>
+                    <textarea name="field5" id="content" class="field field-textarea" placeholder="Type news here"></textarea>
+                </li>
+                <li>
+                    <button input type="submit" class="buttoneliminare buttoneliminare1" onclick=""> Post </button>
                 </li>
             </ul>
         </form><br />
