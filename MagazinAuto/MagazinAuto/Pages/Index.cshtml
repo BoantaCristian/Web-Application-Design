@@ -113,7 +113,6 @@
     }
 </style><!--To do rezolva path wroot css pentru script tag >-->
 
-<script src="~/css/"></script>
 
 <body class="body">
 </body>
@@ -182,18 +181,24 @@
 
 <div class="column gradient1">
 
-    <!-- at{
-        foreach (var nou in news)
-        {
-            <div class="col-md-3">
-                <h2>at nou.Title</h2>
-                <p>
-                    at nou.Message
-                </p>
-            </div>
-        }
-    }-->
 
+    <!--
+
+    at{
+
+    var db = Database.Open("Database.mdf");
+    var news = db.Query("SELECT * FROM Noutati");
+
+    foreach (var nou in news)
+    {
+    <div class="col-md-3">
+        <h2>atnou.Title</h2> <br />
+        <p>
+            atnou.Message
+        </p>
+    </div>
+    }-->
+    
     <div class="col-md-3">
         <h2>Sale</h2>
         <ul>
@@ -219,20 +224,44 @@
             <li>line3</li>
         </ul>
     </div>
+
+    <!-- at{
+            var title = Request.Form["title"];
+            var message = Request.Form["message"];
+
+            var db = Database.Open("Database.mdf");
+            var insertCommand = "INSERT INTO Noutati (Title, Message) Values(attitle, atmessage)";
+            db.Execute(insertCommand, title, message);
+
+        }-->
+
+
     <div class="col-md-3">
         <h2>Post news here</h2>
-        <form>
+        <form id="formNews" method="post" runat="server">
             <ul class="form-style-1">
                 <li>
-                    <input type="text" name="field3" id="title" class="field" placeholder="Title here" />
+                    <input type="text" runat="server" value="@Request.Form["title"]" id="title" class="field" placeholder="Title here" />
                 </li>
                 <li>
-                    <textarea name="field5" id="content" class="field field-textarea" placeholder="Type news here"></textarea>
+                    <textarea runat="server" value="@Request.Form["message"]" name="field5" id="message" class="field field-textarea" placeholder="Type news here"></textarea>
                 </li>
                 <li>
-                    <button input type="submit" class="buttoneliminare buttoneliminare1" onclick=""> Post </button>
+                    <button input type="submit" value="Submit" runat="server" class="buttoneliminare buttoneliminare1"> Post </button>
                 </li>
             </ul>
         </form><br />
+
+        <script>
+            var formNews = document.getElementById('formNews');
+            formNews.onsubmit = function (e) {
+                e.preventDefault();
+                console.log(formNews.title.value, formNews.message.value);
+                var db = Database.Open("Database.mdf");
+                var insertCommand = "INSERT INTO Noutati (Title, Message) VALUES(formNews.title.value, formNews.message.value)";
+                db.Execute(insertCommand, formNews.title.value, formNews.message.value);
+                //Response.Redirect("~/News"); daca vreau sa vad ce am introdus
+            }
+        </script>
     </div>
 </div>

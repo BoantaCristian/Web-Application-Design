@@ -237,27 +237,27 @@
         <p>Total price:functie care ia din db</p>
     </div>
 
-    <form class="column gradient1">
+    <form class="column gradient1" id="buy">
         <ul class="form-style-1">
             <li>
                 <label>Full Name <span class="required">*</span></label>
-                <input type="text" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" />
+                <input type="text" id="nume" name="field1" class="field-divided" placeholder="First" />&nbsp;<input type="text" name="field2" class="field-divided" placeholder="Last" />
             </li>
             <li>
                 <label>Email <span class="required">*</span></label>
-                <input type="email" name="field3" class="field-long" placeholder="mail@example.com" />
+                <input type="email" id="prenume" name="field3" class="field-long" placeholder="mail@example.com" />
             </li>
             <li>
                 <label>Telephone</label>
-                <input type="text" name="field4" class="field-long" placeholder="Telephone" />
+                <input type="text"  id="telefon" name="field4" class="field-long" placeholder="Telephone" />
             </li>
             <li>
                 <label>Adress</label>
-                <textarea name="field5" id="field5" class="field-long field-textarea" placeholder="Type your adress here"></textarea>
+                <textarea name="field5" id="adresa" class="field-long field-textarea" placeholder="Type your adress here"></textarea>
             </li>
             <li>
                 <label>Your Message</label>
-                <textarea name="field6" id="field6" class="field-long field-textarea" placeholder="Type additional messages here"></textarea>
+                <textarea name="field6" id="mesaj" class="field-long field-textarea" placeholder="Type additional messages here"></textarea>
             </li>
             <li>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -267,3 +267,13 @@
     </form>
 </div>
 
+<script>
+    var buy = document.getElementById('buy');
+    buy.onsubmit = function () {
+        console.log(buy.title.value, buy.message.value);
+        var db = Database.Open("Database.mdf");
+        var insertCommand = "INSERT INTO Comanda (Nume, Prenume, Email, Telefon, Adresa, Mesaj) VALUES(buy.nume.value, buy.prenume.value, buy.email.value, buy.telefon.value, buy.adresa.value, buy.mesaj.value)";
+        db.Execute(insertCommand, buy.nume.value, buy.prenume.value, buy.email.value, buy.telefon.value, buy.adresa.value, buy.mesaj.value);
+        //Response.Redirect("~/News"); daca vreau sa vad ce am introdus
+    }
+</script>
